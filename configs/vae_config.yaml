@@ -1,0 +1,20 @@
+dataset: cifar10
+image_size: 32
+in_channels: 3
+
+latent_dim: 128
+encoder_channels: [32, 64, 128]
+
+learning_rate: 0.001
+optimizer: adam
+batch_size: 128
+epochs: 100
+
+kl_weight: 1.0
+kl_warmup_epochs: 10
+
+save_every: 10
+sample_every: 5
+num_samples: 64
+
+seed: 42

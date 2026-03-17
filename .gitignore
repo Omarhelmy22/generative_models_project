@@ -1,0 +1,37 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+build/
+dist/
+*.egg-info/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data and datasets
+data/
+
+# Checkpoints and large weights
+checkpoints/
+
+# Generated images and results
+results/
+evaluation/real_images/
+
+# External cloned repos or tools
+external/
+
+# Logs
+*.log
+
