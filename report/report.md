@@ -137,8 +137,8 @@ maintained during DDPM training and used at sampling time for higher-quality out
 
 _(training loss plots for VAE and DDPM.)_
 
-![VAE Loss](report/vae_loss_curve.png)
-![DDPM Loss](report/ddpm_loss_curve.png)
+![VAE Loss](figures/vae_loss_curve.png)
+![DDPM Loss](figures/ddpm_loss_curve.png)
 
 ### 5.2 Quantitative Evaluation
 
@@ -158,10 +158,10 @@ generated images.
 ### 5.3 Generated Samples
 
 VAE samples:
-![VAE Samples](report/vae_final_grid.png)
+![VAE Samples](figures/vae_final_grid.png)
 
 DDPM samples:
-![DDPM Samples](report/ddpm_final_grid.png)
+![DDPM Samples](figures/ddpm_final_grid.png)
 
 ---
 
