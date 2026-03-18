@@ -37,7 +37,7 @@ generative_models_project/
 ├── results/                    # Generated outputs
 │   ├── vae_samples/
 │   ├── ddpm_samples/
-│   └── comparisons/
+│
 ├── checkpoints/                # Saved model weights
 ├── report/
 │   └── report.md               # Full project report
@@ -63,7 +63,7 @@ pip install -r requirements.txt
 
 ## Dataset
 
-The project uses **CIFAR-10** (32×32 colour images, 10 classes).  The dataset is
+The project uses **CIFAR-10** (32×32 colour images, 10 classes). The dataset is
 downloaded automatically on first training run.
 
 ## Training
@@ -94,8 +94,8 @@ With custom config:
 python training/train_ddpm.py --config configs/ddpm_config.yaml
 ```
 
-Default: 150k steps, batch size 128, Adam (lr=1e-4), T=1000, linear beta schedule,
-EMA decay 0.999, mixed precision (AMP) on CUDA.
+Default: 150k steps, batch size 64, Adam (lr=1e-4), T=1000, linear beta schedule,
+EMA decay 0.999.
 
 ## Sampling
 
@@ -145,17 +145,17 @@ python evaluation/compute_inception_score.py --image_dir results/ddpm_samples/ge
 
 ## Configuration
 
-All hyperparameters are in YAML config files under `configs/`.  Key parameters:
+All hyperparameters are in YAML config files under `configs/`. Key parameters:
 
-| Parameter | VAE | DDPM |
-|-----------|-----|------|
-| Learning rate | 1e-3 | 1e-4 |
-| Batch size | 128 | 128 |
-| Training duration | 100 epochs | 150k steps |
-| Latent dim / Timesteps | 128 | 1000 |
-| KL warm-up | 10 epochs | — |
-| EMA decay | — | 0.999 |
-| Mixed precision | — | Enabled |
+| Parameter              | VAE        | DDPM       |
+| ---------------------- | ---------- | ---------- |
+| Learning rate          | 1e-3       | 1e-4       |
+| Batch size             | 128        | 64         |
+| Training duration      | 100 epochs | 150k steps |
+| Latent dim / Timesteps | 128        | 1000       |
+| KL warm-up             | 10 epochs  | —          |
+| EMA decay              | —          | 0.999      |
+| Mixed precision        | —          | Enabled    |
 
 ## Reproducing Results
 
